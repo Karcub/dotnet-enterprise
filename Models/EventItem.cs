@@ -15,14 +15,11 @@ namespace dotnet_enterprise.Models
         public long UserId { get; set; }
         public DateTime Date { get; set; }
 
-        public string[] FormattedDate
-        {
-            get =>
-                new[]
-                {
-                    Date.ToString("yyyy"), Date.ToString("MMMM dd"),
-                    Date.ToString("dddd"), Date.ToString("HH"), Date.ToString("mm") };
-        }
+        public string[] FormattedDate =>
+            new[]
+            {
+                Date.ToString("yyyy"), Date.ToString("MMMM dd"),
+                Date.ToString("dddd"), Date.ToString("HH"), Date.ToString("mm") };
 
         public string Category { get; set; }
     }

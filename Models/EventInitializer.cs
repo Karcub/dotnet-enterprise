@@ -93,7 +93,7 @@ namespace dotnet_enterprise.Models
                     " ér-e véget a történet? Vagy éppen a halált is legyőző szerelem üdvtörténetét olvassuk ki Shakespeare e halhatatlan művéből?' (Vidnyánszky Attila rendező)</p>" +
                     "<p>'Szerelem és halál, mindig is rokonságban áltak egymással. A beteljesülés ódiuma már követhetetlen, amikor megszületik a felismerés: csak magán a drámán," +
                     " az előadáson keresztül juthatunk e sodrás nyomába – nézőként és alkotóként, egyaránt.'</p>",
-                Location = "Nemzeti Színház, Nagyszínpad - Budapest IX. ker. Bajor Gizi park 1.",
+                Location = "Nemzeti Színház, Nagyszínpad <br> Budapest IX. ker. Bajor Gizi park 1.",
                 City = "Budapest",
                 Image = "https://nemzetiszinhaz.hu/image?src=uploads/images/2020_2021/Romeo_es/net_Romeo_eorifoto-3248.jpg&w=960&h=630&zc=1&a=t",
                 EventUrl = "https://nemzetiszinhaz.hu/eloadas/romeo-es-julia",
