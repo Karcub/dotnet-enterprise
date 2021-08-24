@@ -24,13 +24,13 @@ namespace dotnet_enterprise.Models
                               " félsiker, kilátástalanság, problémamegoldás, kontrollvesztés. Mindez egy kiváló színészzenekarra hangszerelve, ahol mindenki játszik, hol hangszeren," +
                               " hol bábon, hol anélkül. Ahol mindenki elveszít valamit, valamit meg talán nyer.</p><p><em>Hoffer Károly rendező</em></p>" +
                               "<p>Csoportok számára Mozgató program is elérhető.</p>",
-                Location = "Budapest",
-                City = "Budapest Bábszínház, Ország Lili Stúdió<br>1062 Budapest, Andrássy út 69.",
+                City = "Budapest",
+                Location = "Budapest Bábszínház, Ország Lili Stúdió<br>1062 Budapest, Andrássy út 69.",
                 Image = "https://pb2.jegy.hu/imgs/system-4/program/000/040/179/semmi-474-279-37355.jpg",
                 EventUrl = "https://www.jegy.hu/program/semmi-40179",
                 UserId = 1,
-                Date = new DateTime(2021, 9, 29),
-                Category = EventCategory.THEATHER
+                Date = new DateTime(2021, 9, 29, 13, 00,00),
+                Category = "THEATHER"
             };
             EventItem eventItem2 = new EventItem
             {
@@ -52,7 +52,7 @@ namespace dotnet_enterprise.Models
                 EventUrl = "https://www.jegy.hu/program/giselle-90843",
                 UserId = 1,
                 Date = new DateTime(2021, 09, 24, 19, 00, 00),
-                Category = EventCategory.THEATHER
+                Category = "THEATHER"
             };
             EventItem eventItem3 = new EventItem
             {
@@ -70,7 +70,8 @@ namespace dotnet_enterprise.Models
                 Image = "https://pb2.jegy.hu/imgs/system-4/program/000/121/891/oz-a-csodak-csodaja-musical-ket-reszben-474-279-171888.jpeg",
                 EventUrl = "https://www.jegy.hu/program/oz-a-csodak-csodaja-musical-ket-reszben-121891",
                 UserId = 1,
-                Date = new DateTime(2021, 08, 27, 19, 30, 00)
+                Date = new DateTime(2021, 08, 27, 19, 30, 00),
+                Category = "THEATHER"
             };
             EventItem eventItem4 = new EventItem
             {
@@ -98,7 +99,7 @@ namespace dotnet_enterprise.Models
                 EventUrl = "https://nemzetiszinhaz.hu/eloadas/romeo-es-julia",
                 UserId = 1,
                 Date = new DateTime(2021, 10, 14, 18, 30, 00),
-                Category = EventCategory.THEATHER
+                Category = "THEATHER"
             };
 
             EventItems = new[] { eventItem, eventItem2, eventItem3, eventItem4 };
