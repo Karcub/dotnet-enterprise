@@ -24,14 +24,14 @@ namespace dotnet_enterprise.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<EventItem>>> GetEventItems()
         {
-            return await _context.TodoItems.ToListAsync();
+            return await _context.EventItems.ToListAsync();
         }
 
         // GET: api/EventItems/5
         [HttpGet("{id}")]
         public async Task<ActionResult<EventItem>> GetEventItem(long id)
         {
-            var eventItem = await _context.TodoItems.FindAsync(id);
+            var eventItem = await _context.EventItems.FindAsync(id);
 
             if (eventItem == null)
             {
@@ -76,7 +76,7 @@ namespace dotnet_enterprise.Controllers
         [HttpPost]
         public async Task<ActionResult<EventItem>> PostEventItem(EventItem eventItem)
         {
-            _context.TodoItems.Add(eventItem);
+            _context.EventItems.Add(eventItem);
             await _context.SaveChangesAsync();
 
             //return CreatedAtAction("GetEventItem", new { id = eventItem.Id }, eventItem);
@@ -87,13 +87,13 @@ namespace dotnet_enterprise.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteEventItem(long id)
         {
-            var eventItem = await _context.TodoItems.FindAsync(id);
+            var eventItem = await _context.EventItems.FindAsync(id);
             if (eventItem == null)
             {
                 return NotFound();
             }
 
-            _context.TodoItems.Remove(eventItem);
+            _context.EventItems.Remove(eventItem);
             await _context.SaveChangesAsync();
 
             return NoContent();
@@ -101,7 +101,7 @@ namespace dotnet_enterprise.Controllers
 
         private bool EventItemExists(long id)
         {
-            return _context.TodoItems.Any(e => e.EventId == id);
+            return _context.EventItems.Any(e => e.EventId == id);
         }
     }
 }

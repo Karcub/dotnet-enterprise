@@ -9,6 +9,6 @@ namespace dotnet_enterprise.Models
         {
         }
 
-        public DbSet<EventItem> TodoItems { get; set; }
+        public DbSet<EventItem> EventItems { get; set; }
     }
 }
