@@ -4,7 +4,7 @@ namespace dotnet_enterprise.Models
 {
     public class EventItem
     {
-        public long EventId { get; set; }
+        public long Id { get; set; }
         public string Name { get; set; }
         public bool IsFavorite { get; set; }
         public string Description { get; set; }
