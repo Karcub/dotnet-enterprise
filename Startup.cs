@@ -41,6 +41,10 @@ namespace dotnet_enterprise
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            var scope = app.ApplicationServices.CreateScope();
+            var context = scope.ServiceProvider.GetRequiredService<EventContext>();
+            AddStartupData(context);
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -58,6 +62,37 @@ namespace dotnet_enterprise
             {
                 endpoints.MapControllers();
             });
+        }
+
+        private static void AddStartupData(EventContext context)
+        {
+            EventItem eventItem = new EventItem
+            {
+                Id = 1,
+                Name = "Test event",
+                IsFavorite = false,
+                Description = "Test event description",
+                Location = "Budapest",
+                Image = "https://i.szalas.hu/settlement/3054643/800x500.jpg",
+                EventUrl = "",
+                UserId = 1,
+                Date = new DateTime(2021, 10, 01)
+            };
+            EventItem eventItem2 = new EventItem
+            {
+                Id = 2,
+                Name = "Test event 2",
+                IsFavorite = false,
+                Description = "Test event description 2",
+                Location = "Debrecen",
+                Image = "https://image.arrivalguides.com/500x500/14/ff494be6d70b5c8d483966f3b27bf700.jpg",
+                EventUrl = "",
+                UserId = 1,
+                Date = new DateTime(2021, 10, 01)
+            };
+            context.Add(eventItem);
+            context.Add(eventItem2);
+            context.SaveChanges();
         }
     }
 }
