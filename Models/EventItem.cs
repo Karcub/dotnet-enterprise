@@ -14,6 +14,16 @@ namespace dotnet_enterprise.Models
         public string EventUrl { get; set; }
         public long UserId { get; set; }
         public DateTime Date { get; set; }
-        public EventCategory Category { get; set; }
+
+        public string[] FormattedDate
+        {
+            get =>
+                new[]
+                {
+                    Date.ToString("yyyy"), Date.ToString("MMMM dd"),
+                    Date.ToString("dddd"), Date.ToString("HH"), Date.ToString("mm") };
+        }
+
+        public string Category { get; set; }
     }
 }
