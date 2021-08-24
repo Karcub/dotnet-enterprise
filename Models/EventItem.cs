@@ -14,6 +14,6 @@ namespace dotnet_enterprise.Models
         public string EventUrl { get; set; }
         public long UserId { get; set; }
         public DateTime Date { get; set; }
-
+        public EventCategory Category { get; set; }
     }
 }

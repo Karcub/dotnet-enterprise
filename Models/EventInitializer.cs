@@ -1,7 +1,6 @@
 ﻿using System;
-using dotnet_enterprise.Models;
 
-namespace dotnet_enterprise
+namespace dotnet_enterprise.Models
 {
     public class EventInitializer
     {
@@ -26,13 +25,12 @@ namespace dotnet_enterprise
                               " hol bábon, hol anélkül. Ahol mindenki elveszít valamit, valamit meg talán nyer.</p><p><em>Hoffer Károly rendező</em></p>" +
                               "<p>Csoportok számára Mozgató program is elérhető.</p>",
                 Location = "Budapest",
-                City = "<a class='place' href='https://www.jegy.hu/venue/budapest-babszinhaz'>" +
-                       "Budapest Bábszínház, Ország Lili Stúdió<br>" +
-                       "1062 Budapest, Andrássy út 69.</a>",
+                City = "Budapest Bábszínház, Ország Lili Stúdió<br>1062 Budapest, Andrássy út 69.",
                 Image = "https://pb2.jegy.hu/imgs/system-4/program/000/040/179/semmi-474-279-37355.jpg",
                 EventUrl = "https://www.jegy.hu/program/semmi-40179",
                 UserId = 1,
-                Date = new DateTime(2021, 9, 29)
+                Date = new DateTime(2021, 9, 29),
+                Category = EventCategory.THEATHER
             };
             EventItem eventItem2 = new EventItem
             {
@@ -49,11 +47,12 @@ namespace dotnet_enterprise
                               " visszaadni.<br><br>A mű az orosz koreográfus-legenda, Leonyid Lavrovszkij híres átdolgozásában, az ún. moszkvai változatban látható a Magyar" +
                               " Nemzeti Balett művészeinek tolmácsolásában.</p>",
                 City = "Budapest",
-                Location = "<a href='https://www.jegy.hu/venue/erkel-szinhaz-erkel-theatre'>Erkel Színház / Erkel Theatre, Erkel Színház<br>1087 Budapest, II. János Pál pápa tér 30.</a>",
+                Location = "Erkel Színház / Erkel Theatre, Erkel Színház<br>1087 Budapest, II. János Pál pápa tér 30.",
                 Image = "https://pb2.jegy.hu/imgs/system-4/program/000/090/843/giselle-474-279-139792.jpg",
                 EventUrl = "https://www.jegy.hu/program/giselle-90843",
                 UserId = 1,
-                Date = new DateTime(2021, 09, 24, 19, 00, 00)
+                Date = new DateTime(2021, 09, 24, 19, 00, 00),
+                Category = EventCategory.THEATHER
             };
             EventItem eventItem3 = new EventItem
             {
@@ -66,7 +65,7 @@ namespace dotnet_enterprise
                               "<p>Napjainkban, ezekben a bonyolult színházi időkben, nagyon fontos a boldogságról és a fényről beszélni. Gyönyörű zene, nagyszerű előadás, tehetséges színészek várják a nézőket!</p>" +
                               "<p>Ez az igazán szívhez szóló történet Ilja Bocsarnikovsz&nbsp;rendezésében kel életre a Szabadtéri színpadán.</p>" +
                               "<p><strong>A külföldi érdeklődőkre való tekintettel augusztus 28-án angol felirattal tekinthető meg az Óz, a csodák csodája című előadás a Nagyerdei Szabadtéri Színpadon.</strong></span></span></span>",
-                Location = "<a href='https://www.jegy.hu/venue/nagyerdei-szabadteri-szinpad'>Nagyerdei Szabadtéri Színpad<br>4032 Debrecen, Nagyerdei park 6.</a>",
+                Location = "Nagyerdei Szabadtéri Színpad<br>4032 Debrecen, Nagyerdei park 6.",
                 City = "Debrecen",
                 Image = "https://pb2.jegy.hu/imgs/system-4/program/000/121/891/oz-a-csodak-csodaja-musical-ket-reszben-474-279-171888.jpeg",
                 EventUrl = "https://www.jegy.hu/program/oz-a-csodak-csodaja-musical-ket-reszben-121891",
@@ -98,7 +97,8 @@ namespace dotnet_enterprise
                 Image = "https://nemzetiszinhaz.hu/image?src=uploads/images/2020_2021/Romeo_es/net_Romeo_eorifoto-3248.jpg&w=960&h=630&zc=1&a=t",
                 EventUrl = "https://nemzetiszinhaz.hu/eloadas/romeo-es-julia",
                 UserId = 1,
-                Date = new DateTime(2021, 10, 14, 18, 30, 00)
+                Date = new DateTime(2021, 10, 14, 18, 30, 00),
+                Category = EventCategory.THEATHER
             };
 
             EventItems = new[] { eventItem, eventItem2, eventItem3, eventItem4 };
