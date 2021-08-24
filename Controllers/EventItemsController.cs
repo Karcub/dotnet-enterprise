@@ -46,7 +46,7 @@ namespace dotnet_enterprise.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutEventItem(long id, EventItem eventItem)
         {
-            if (id != eventItem.Id)
+            if (id != eventItem.EventId)
             {
                 return BadRequest();
             }
@@ -80,7 +80,7 @@ namespace dotnet_enterprise.Controllers
             await _context.SaveChangesAsync();
 
             //return CreatedAtAction("GetEventItem", new { id = eventItem.Id }, eventItem);
-            return CreatedAtAction(nameof(GetEventItem), new { id = eventItem.Id }, eventItem);
+            return CreatedAtAction(nameof(GetEventItem), new { id = eventItem.EventId }, eventItem);
         }
 
         // DELETE: api/EventItems/5
@@ -101,7 +101,7 @@ namespace dotnet_enterprise.Controllers
 
         private bool EventItemExists(long id)
         {
-            return _context.TodoItems.Any(e => e.Id == id);
+            return _context.TodoItems.Any(e => e.EventId == id);
         }
     }
 }
