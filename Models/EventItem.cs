@@ -10,6 +10,7 @@ namespace dotnet_enterprise.Models
         public string Description { get; set; }
         public string Image { get; set; }
         public string Location { get; set; }
+        public string City { get; set; }
         public string EventUrl { get; set; }
         public long UserId { get; set; }
         public DateTime Date { get; set; }
