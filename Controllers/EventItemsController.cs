@@ -27,6 +27,15 @@ namespace dotnet_enterprise.Controllers
             return await _context.EventItems.ToListAsync();
         }
 
+        // GET: api/EventItems/favorites
+        [HttpGet("favorites")]
+        public async Task<ActionResult<IEnumerable<EventItem>>> GetFavoriteEventItems()
+        {
+            return await _context.EventItems
+                .Where(eventItem => eventItem.IsFavorite)
+                .ToListAsync();
+        }
+
         // GET: api/EventItems/5
         [HttpGet("{id}")]
         public async Task<ActionResult<EventItem>> GetEventItem(long id)
