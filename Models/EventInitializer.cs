@@ -31,7 +31,7 @@ namespace dotnet_enterprise.Models
                 EventUrl = "https://www.jegy.hu/program/semmi-40179",
                 UserId = 1,
                 Date = new DateTime(2021, 9, 29, 13, 00,00),
-                Category = "THEATHER"
+                Category = "THEATER"
             };
             EventItem eventItem2 = new EventItem
             {
@@ -54,7 +54,7 @@ namespace dotnet_enterprise.Models
                 EventUrl = "https://www.jegy.hu/program/giselle-90843",
                 UserId = 1,
                 Date = new DateTime(2021, 09, 24, 19, 00, 00),
-                Category = "THEATHER"
+                Category = "THEATER"
             };
             EventItem eventItem3 = new EventItem
             {
@@ -74,14 +74,14 @@ namespace dotnet_enterprise.Models
                 EventUrl = "https://www.jegy.hu/program/oz-a-csodak-csodaja-musical-ket-reszben-121891",
                 UserId = 1,
                 Date = new DateTime(2021, 08, 27, 19, 30, 00),
-                Category = "THEATHER"
+                Category = "THEATER"
             };
             EventItem eventItem4 = new EventItem
             {
                 Id = 4,
                 Name = "Rómeó és Júlia",
                 Subtitle = "dráma két felvonásban",
-                IsFavorite = false,
+                IsFavorite = true,
                 Description = "<p>'Amíg Rómeó a csinos Rózába szerelmes, egy kicsit érzékeny, de pontosan úgy viselkedik és úgy beszél, mint a többi. Abban a percben, amikor Júliát megismeri," +
                     " elkezd félrebeszélni. Szokatlan szavakat mond és azokat furcsa értelemben használja. Néha bizarr, többször groteszk, még többször teljesen értelmetlen." +
                     " Minél bolondabbul szeret, annál bolondabbul viselkedik és beszél./…/ Úgy látszik, hogy Rómeó megőrült. Erről szó sincs. Az élet csak akkor kezdődik," +
@@ -103,7 +103,7 @@ namespace dotnet_enterprise.Models
                 EventUrl = "https://nemzetiszinhaz.hu/eloadas/romeo-es-julia",
                 UserId = 1,
                 Date = new DateTime(2021, 10, 14, 18, 30, 00),
-                Category = "THEATHER"
+                Category = "THEATER"
             };
             EventItem eventItem5 = new EventItem
             {
@@ -131,7 +131,7 @@ namespace dotnet_enterprise.Models
                 EventUrl = "https://www.jegy.hu/program/proton-szinhazmundruczo-kornel-nehez-istennek-lenni-124208",
                 UserId = 1,
                 Date = new DateTime(2021, 8, 28, 20, 30,00),
-                Category = "THEATHER"
+                Category = "THEATER"
             };
             EventItem eventItem6 = new EventItem
             {
@@ -166,7 +166,7 @@ namespace dotnet_enterprise.Models
                 EventUrl = "https://www.jegy.hu/program/the-black-paintingsblue-szegedi-kortars-balett-hun-123757",
                 UserId = 1,
                 Date = new DateTime(2021, 8, 29, 19, 00,00),
-                Category = "THEATHER"
+                Category = "THEATER"
             };
             EventItem eventItem7 = new EventItem
             {
@@ -183,7 +183,7 @@ namespace dotnet_enterprise.Models
                 EventUrl = "https://www.jegy.hu/program/az-ugynok-halala-67668",
                 UserId = 1,
                 Date = new DateTime(2021, 10, 6, 19, 0,00),
-                Category = "THEATHER"
+                Category = "THEATER"
             };
             EventItem eventItem8 = new EventItem
             {
@@ -201,7 +201,7 @@ namespace dotnet_enterprise.Models
                 EventUrl = "https://www.jegy.hu/program/pinter-bela-es-tarsulata-a-demon-gyermekei-27225",
                 UserId = 1,
                 Date = new DateTime(2021, 9, 30, 20, 00,00),
-                Category = "THEATHER"
+                Category = "THEATER"
             };
             EventItem eventItem9 = new EventItem
             {
@@ -235,7 +235,7 @@ namespace dotnet_enterprise.Models
                 EventUrl = "https://www.jegy.hu/program/nok-az-idegosszeomlas-szelen-124975",
                 UserId = 1,
                 Date = new DateTime(2021, 9, 10, 19, 00,00),
-                Category = "THEATHER"
+                Category = "THEATER"
             };
             EventItem eventItem10 = new EventItem
             {
@@ -263,7 +263,7 @@ namespace dotnet_enterprise.Models
                 EventUrl = "https://www.jegy.hu/program/pinter-bela-es-tarsulata-tundoklo-kozepszer-113588",
                 UserId = 1,
                 Date = new DateTime(2021, 9, 13, 20, 00,00),
-                Category = "THEATHER"
+                Category = "THEATER"
             };
             EventItem eventItem11 = new EventItem
             {
@@ -415,7 +415,7 @@ namespace dotnet_enterprise.Models
                 EventUrl = "https://www.jegy.hu/program/jezus-krisztus-szupersztar-124729?affiliate_code=cln5-20210823-jezus_krisztus_szuperszt",
                 UserId = 1,
                 Date = new DateTime(2021, 10, 16, 15, 00,00),
-                Category = "THEATHER"
+                Category = "THEATER"
             };
             EventItem eventItem20 = new EventItem
             {
