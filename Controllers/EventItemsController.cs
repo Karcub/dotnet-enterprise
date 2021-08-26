@@ -35,6 +35,24 @@ namespace dotnet_enterprise.Controllers
                 .Where(eventItem => eventItem.IsFavorite)
                 .ToListAsync();
         }
+        
+        // GET: api/EventItems/category/THEATER
+        [HttpGet("category/{category}")]
+        public async Task<ActionResult<IEnumerable<EventItem>>> GetCategoryEventItems(string category)
+        {
+            return await _context.EventItems
+                .Where(eventItem => eventItem.Category == category)
+                .ToListAsync();
+        }
+        
+        // GET: api/EventItems/city/Budapest
+        [HttpGet("city/{city}")]
+        public async Task<ActionResult<IEnumerable<EventItem>>> GetCityEventItems(string city)
+        {
+            return await _context.EventItems
+                .Where(eventItem => eventItem.City == city)
+                .ToListAsync();
+        }
 
         // GET: api/EventItems/5
         [HttpGet("{id}")]
