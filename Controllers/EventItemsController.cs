@@ -108,7 +108,6 @@ namespace dotnet_enterprise.Controllers
             _context.EventItems.Add(eventItem);
             await _context.SaveChangesAsync();
 
-            //return CreatedAtAction("GetEventItem", new { id = eventItem.Id }, eventItem);
             return CreatedAtAction(nameof(GetEventItem), new { id = eventItem.Id }, eventItem);
         }
 
