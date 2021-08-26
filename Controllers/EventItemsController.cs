@@ -54,6 +54,16 @@ namespace dotnet_enterprise.Controllers
                 .ToListAsync();
         }
 
+        //GET: api/EventItems/event/Semmi
+        [HttpGet("event/{name}")]
+        public async Task<ActionResult<IEnumerable<EventItem>>> GetEventItemByName(string name)
+        {
+            return await _context.EventItems
+                .Where(eventItem => eventItem.Name.ToLower().Contains(name.ToLower()))
+                .ToListAsync();
+        }
+
+
         // GET: api/EventItems/5
         [HttpGet("{id}")]
         public async Task<ActionResult<EventItem>> GetEventItem(long id)
