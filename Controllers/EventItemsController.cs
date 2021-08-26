@@ -37,20 +37,12 @@ namespace dotnet_enterprise.Controllers
         }
         
         // GET: api/EventItems/category/THEATER
-        [HttpGet("category/{category}")]
-        public async Task<ActionResult<IEnumerable<EventItem>>> GetCategoryEventItems(string category)
+        [HttpGet("filter/{filterType}/{keyword}")]
+        public async Task<ActionResult<IEnumerable<EventItem>>> GetCategoryEventItems(string filterType, string keyword)
         {
             return await _context.EventItems
-                .Where(eventItem => eventItem.Category == category)
-                .ToListAsync();
-        }
-        
-        // GET: api/EventItems/city/Budapest
-        [HttpGet("city/{city}")]
-        public async Task<ActionResult<IEnumerable<EventItem>>> GetCityEventItems(string city)
-        {
-            return await _context.EventItems
-                .Where(eventItem => eventItem.City == city)
+                .Where(eventItem => filterType.Equals("category") ? 
+                    eventItem.Category == keyword : eventItem.City  == keyword)
                 .ToListAsync();
         }
 
