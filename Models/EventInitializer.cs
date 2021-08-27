@@ -81,7 +81,7 @@ namespace dotnet_enterprise.Models
                 Id = 4,
                 Name = "Rómeó és Júlia",
                 Subtitle = "dráma két felvonásban",
-                IsFavorite = true,
+                IsFavorite = false,
                 Description = "<p>'Amíg Rómeó a csinos Rózába szerelmes, egy kicsit érzékeny, de pontosan úgy viselkedik és úgy beszél, mint a többi. Abban a percben, amikor Júliát megismeri," +
                     " elkezd félrebeszélni. Szokatlan szavakat mond és azokat furcsa értelemben használja. Néha bizarr, többször groteszk, még többször teljesen értelmetlen." +
                     " Minél bolondabbul szeret, annál bolondabbul viselkedik és beszél./…/ Úgy látszik, hogy Rómeó megőrült. Erről szó sincs. Az élet csak akkor kezdődik," +
@@ -100,7 +100,7 @@ namespace dotnet_enterprise.Models
                 Location = "Nemzeti Színház, Nagyszínpad <br> Budapest IX. ker. Bajor Gizi park 1.",
                 City = "Budapest",
                 Image = "https://nemzetiszinhaz.hu/image?src=uploads/images/2020_2021/Romeo_es/net_Romeo_eorifoto-3248.jpg&w=960&h=630&zc=1&a=t",
-                EventUrl = "https://nemzetiszinhaz.hu/eloadas/romeo-es-julia",
+                EventUrl = "https://nullahategy.hu/jol-allhat-e-david-bowie-shakespeare-nek-megneztuk-a-nemzeti-szinhaz-uj-romeo-es-julia-eloadasat-kepgaleriaval/",
                 UserId = 1,
                 Date = new DateTime(2021, 10, 14, 18, 30, 00),
                 Category = "THEATER"
@@ -229,7 +229,7 @@ namespace dotnet_enterprise.Models
                               "Látványtervező: ZÖLDY Z. GERGELY<br>Rendező: TASNÁDI CSABA<br><br>" +
                               "Veres 1 Színház előadása<br>Az előadás hossza: 1 óra 55 perc, egy szünettel.<br>" +
                               "Rózsakert Szabadtéri Színpad</p>",
-                City = "Budapest",
+                City = "Nyíregyháza",
                 Location = "Móricz Zsigmond Színház, Rózsakert Szabadtéri Színpad<br>4400 Nyíregyháza, Benczúr tér 22.",
                 Image = "https://pb2.jegy.hu/imgs/system-4/program/000/124/975/nok-az-idegosszeomlas-szelen-original-171650.jpg",
                 EventUrl = "https://www.jegy.hu/program/nok-az-idegosszeomlas-szelen-124975",
@@ -259,7 +259,7 @@ namespace dotnet_enterprise.Models
                               "Az előadás hossza: 100 perc, szünet nélkül<br>Korhatár: 16 év<br><br></p>",
                 City = "Budapest",
                 Location = "Pintér Béla és Társulata, UP Újpesti Rendezvénytér<br>1042 Budapest, Szent István tér 13-14.",
-                Image = "https://lh3.googleusercontent.com/proxy/cBSBO44PAQalaQAczLJhxYMUf9-dgkoaHONQ5OPb3cC4i1DPsU7esSjx_4gYUWicJPdE4W3YvLjGIE-PiiJmyGO09zBcSlwTqrzlmqf3R1Tqw9Vh98FL1w",
+                Image = "https://pb2.jegy.hu/imgs/system-4/program/000/103/315/pinter-bela-es-tarsulata-tundoklo-kozepszer-original-140719.jpg",
                 EventUrl = "https://www.jegy.hu/program/pinter-bela-es-tarsulata-tundoklo-kozepszer-113588",
                 UserId = 1,
                 Date = new DateTime(2021, 9, 13, 20, 00,00),
@@ -311,8 +311,8 @@ namespace dotnet_enterprise.Models
             EventItem eventItem13 = new EventItem
             {
                 Id = 13,
-                Name = "In Memoriam Chet Baker Trio",
-                Subtitle = "",
+                Name = "In Memoriam Chet Baker",
+                Subtitle = "trio",
                 IsFavorite = false,
                 Description = "<p>A trio három éve azzal a céllal alakult, hogy újra megteremtse a trombitás legenda, Chet Baker szellemiségét tükröző jazz kamarazenélést." +
                               " Chet Baker sokféle felállásából mi a trombita-gitár-nagybőgő elegyét választottuk, ez áll legközelebb a szívünkhöz." +
@@ -405,8 +405,8 @@ namespace dotnet_enterprise.Models
             EventItem eventItem19 = new EventItem
             {
                 Id = 19,
-                Name = "Jézus Krisztus Szupersztár",
-                Subtitle = "",
+                Name = "Jézus Krisztus",
+                Subtitle = "Szupersztár",
                 IsFavorite = false,
                 Description = "<p>Andrew Lloyd Webber és Tim Rice rockoperája forradalmasította a zenés színházat, és olyan kérdéseket vetett fel, amelyek mindmáig érvényesek. Főhőse nem csak a címszereplő Jézus, egyenrangú társa Júdás, aki kétségbeesett igyekezettel próbálja megérteni barátja cselekedeteit, de mindhiába. Kérdéseire rejtélyes válaszokat kap, és egyre világosabbá válik, hogy olyan történetbe csöppent, amelynek folytatására csekély hatása lehet - csakúgy, mint a többi szereplőnek, Pilátustól Heródesig, Mária Magdolnától Kajafásig.Egy hét eseményeibe tömörül minden emberi és emberfeletti történés: Jézus és híveinek jeruzsálemi bevonulásától a keresztre feszítésig tart a cselekmény.A. L. Webber zenéje friss és elsöprő, egyik nagy sláger követi a másikat. Egy nagy ívű pálya első mérföldköve áll most új, modern és látványos köntösben a Madách Színház publikuma elé.</p>",
                 City = "Budapest",
@@ -432,12 +432,57 @@ namespace dotnet_enterprise.Models
                 Date = new DateTime(2021, 8, 27, 19, 00,00),
                 Category = "CONCERT"
             };
-
+            EventItem eventItem21 = new EventItem
+            {
+                Id = 21,
+                Name = "Debrecziner",
+                Subtitle = "Gourmet Fesztivál",
+                IsFavorite = false,
+                Description = "<p>VIP jegy: 3 napra szóló karszalag, 1 db exkluzív kóstoló pohár, belépés a Gourmet Teraszra: pezsgő, bor, kézműves sör, whiskey kóstoltatás, illetve sajt és sonkakóstoló is vár. A Gourmet Teraszon kötetlen formában beszélgethetsz, koccinthatsz a gasztrovilág ikonikus arcaival.<br><br>A korlátozott férőhelyek miatt limitált létszámban áll rendelkezésre!</p>",
+                City = "Debrecen",
+                Location = "Nagyerdei Park - Békás tó, GOURMET VIP BÉRLET<br>4032 Debrecen, Nagyerdi Park",
+                Image = "https://pb2.jegy.hu/imgs/system-4/program/000/105/663/debrecziner-gourmet-fesztival-original-136410.jpg",
+                EventUrl = "https://www.jegy.hu/program/debrecziner-gourmet-fesztival-105663",
+                UserId = 1,
+                Date = new DateTime(2021, 9, 3, 15, 00,00),
+                Category = "FESTIVAL"
+            };
+            EventItem eventItem22 = new EventItem
+            {
+                Id = 22,
+                Name = "AVL-ÉRDI JAZZ",
+                Subtitle = "László Attila Fusion Circus",
+                IsFavorite = false,
+                Description = "<p>László Attila Fusion Circus // AVL-Érdi Jazz Fesztivál<br>(előzenekar: Soso Trió) A Liszt-díjas gitárművész, zeneszerző László Attila, gitárra, három fúvósra és ritmusszekcióra áthangszerelt dinamikus, ritmikus kompozíciói lesznek hallhatóak a műsor legnagyobb részében.<br><br><strong>László Attila Fusion Circus:</strong><br>László Attila – gitár<br>Nagy János – billentyűs hangszerek<br>Lattmann Béla – basszusgitár<br>Zombori Attila – dob<br>Pecze Balázs – trombita<br>Soso Lakatos Sándor – szaxofon<br>Csapó Krisztián – harsona<br><br>Előttük 17:30-tól Soso Lakatos Sándor szaxofonos triója lép fel.<br>Soso Lakatos Sándor – szaxofon, Egri János Jr. – zongora, Egri János - bőgő<br><br><br>A jegyek nem helyre szólnak. Helyfoglalás az érkezés sorrendjében.<br><br>A rendezvény a hatályos járványügyi szabályozásoknak megfelelően látogatható.<br><br>A jegy megvásárlója tudomásul veszi, hogy a jelenleg érvényben lévő jogszabályok szerint tudjuk beengedni a közönséget.</p>",
+                City = "Érd",
+                Location = "AVL-Érdi Jazz Fesztivál, Magyar Földrajzi Múzeum kertje<br>2030 Érd, Budai út 4.",
+                Image = "https://pb2.jegy.hu/imgs/system-4/program/000/125/767/avl-erdi-jazz-fesztival-soso-trio-laszlo-attila-fusion-circus-original-172115.jpg",
+                EventUrl = "https://www.jegy.hu/program/avl-erdi-jazz-fesztival-soso-trio-laszlo-attila-fusion-circus-125767",
+                UserId = 1,
+                Date = new DateTime(2021, 9, 11, 17, 30,00),
+                Category = "FESTIVAL"
+            };
+            EventItem eventItem23 = new EventItem
+            {
+                Id = 23,
+                Name = "Ahogy teccik",
+                Subtitle = "színházi előadás középiskolásoknak",
+                IsFavorite = false,
+                Description = "<p>Shakespeare-Szabó Attila-Beck Zoli: Ahogy teccik – nemtragédia<br>Az előadás a Hartai Ügynökség hozzájárulásával valósul meg.<br>A produkció a Városmajori Szabadtéri Színpad előadása.<br><br>A Városmajori Szabadtéri Színpad 2021-es évadra tervezett saját produkciója a Covid okán szociálisan elszigetelt fiatalokra fókuszál. A több mint egy éve velünk élő járvány árnyékában felértékelődött minden személyes találkozás, kapcsolat. Az izoláció nem csupán a felnőtteket, de a fiatalabb korosztályokat is mélyen érintette. A kitörési vágy, a szabadság keresése igencsak érthető… Az elsősorban középiskolásokat célzó zenés színházi előadás, melynek zenei vezetője Beck Zoltán, a 30Y zenekar alapítója, Shakespeare Ahogy tetszik című vígjátékának átirata, ahol az eredeti dráma csupán a kiindulópont, a gondolkodásmód pedig a díszlet.<br><br>Az előadás úgy használja a Shakespeare-vígjáték szövegét alapanyagnak, ahogy tetszik: szerteágazva, mint az Ardeni-erdő fáinak gyökérzete, ami befonja a száműzöttek lépéseinek, a tétovák saroksüllyedéseinek a nyomát. Mert ott járunk mi is az Ardeni-erdőben, ott bolyongunk, ahová a szerelmeseket hajszolja a vágy, a keresőket a szépség, a fiatalokat a felnövéstől való félelem. 30 fiatal színészhallgató néz szembe Shakespeare kaleidoszkópján keresztül saját ábrándjaival, szorongásaival. Menekülnek, mert szerelmesek az igazságba, a tisztességbe, a tisztaságba (de leginkább a szerelembe). Ez a történet most az övéké, a mai fiataloké. És valljuk be, ha tetszik, ha nem, mielőtt kivágjuk az Ardeni-erdő maradék fáit is, érdemes meghallani a hangjukat.<br><br><strong>Közreműködők</strong><br><br>Shakespeare azonos című vígjátékát (Nádasdy Ádám és Szabó Lőrinc műfordításában), a színészek improvizációit, valamint a pánikot és a derűt felhasználva írta: SZABÓ ATTILA<br><br>Az előadás alkotói:<br>Halasi Dániel rendező<br>Hargitai Iván művészeti tanácsadó<br>Szabó Attila dramaturg<br>Beck Zoltán (30Y) zenei vezető, zeneszerző<br>Horváth Kristóf Színész Bob – hipp-hopp<br>zenekar: Sárközy Zoltán Papa (30Y), Herold János Yank, Rozs Tamás<br><br>Góbi Rita koreográfus<br>Magyarósi Éva díszlet<br>Miareczky Edit jelmez<br>Dima Rita Timi jelmeztervező asszisztens<br><br>Előadják a Pesti Magyar Színiakadémia színészhallgatói:<br>Balázs Barbara, Balogh Benjámin, Fekete Flóra Tamara, Gécsek Bendegúz, Gyulai Marcell, Jászay Dorina, Kassay Márton, Kelemen Márk Balázs, Kovács László Márton, Kovács Mátyás, Megyesi Pálma, Móré Márta Viktória, Murányi Eszter, Nyitrai Hédi Kitti, Mezei Anna Mária, Magos Fanni, Pintér Janka, Rajnai Lázár, Simon Péter, Szabó Bence, Szatmári Alíz Petra, Tabajdi Anna,Tarján Lőrinc, Totev Noémi, Tóth Nikolett, Verebélyi Aliz, Zováth Evelin<br>valamint: Beck Zoltán, Sárközy Zoltán, Herold János és Rozs Tamás<br><br>Benkő Nóra művészeti vezető<br>Tóth Erika rendezőasszisztens<br>Szegi Marci ügyelő<br><br>Köszönet az együttműködésért a Forrai Metodista Gimnázium és Művészeti Technikum, Divat-, jelmez- és díszlettervező szakának.</p>",
+                City = "Budapest",
+                Location = "Városmajori Szabadtéri Színpad<br>1122 Budapest, Városmajor",
+                Image = "https://pb2.jegy.hu/imgs/system-4/program/000/124/402/ahogy-teccik-original-169759.jpg",
+                EventUrl = "https://www.jegy.hu/program/ahogy-teccik-124402",
+                UserId = 1,
+                Date = new DateTime(2021, 9, 19, 13, 00,00),
+                Category = "FESTIVAL"
+            };
+            
             EventItems = new[]
             {
-                eventItem, eventItem2, eventItem3, eventItem4, eventItem5, eventItem6, eventItem7, eventItem8,
-                eventItem9, eventItem10, eventItem11, eventItem12, eventItem13, eventItem14, eventItem15,
-                eventItem16, eventItem17, eventItem18, eventItem19, eventItem20
+                eventItem4, eventItem2, eventItem22, eventItem, eventItem18, eventItem6, eventItem7, eventItem8,
+                eventItem16, eventItem10, eventItem11, eventItem12, eventItem13, eventItem14, eventItem15,
+                eventItem9, eventItem17, eventItem5, eventItem19, eventItem20, eventItem21, eventItem3, eventItem23
             };
         }
     }
