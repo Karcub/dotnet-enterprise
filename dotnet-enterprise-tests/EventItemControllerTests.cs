@@ -47,5 +47,29 @@ namespace dotnet_enterprise_tests
             // Assert.That(_controller.GetEventItem(123), Is.EqualTo(response));
             Assert.That(_controller.GetEventItem(1).Result.Value, Is.EqualTo(null));
         }
+
+        [Test]
+        public void GetFavoriteEventItems_IfThereAreFavorites_ReturnsList()
+        {
+            var eventItem1 = new EventItem { Id = 1, IsFavorite = false };
+            var eventItem2 = new EventItem { Id = 2, IsFavorite = true};
+            var eventItem3 = new EventItem { Id = 3, IsFavorite = true };
+
+            var eventList = new List<EventItem>() {eventItem2, eventItem3};
+            var eventTask = Task.Run(() => eventList);
+
+            _mockRepository.GetFavorites().Returns(eventList);
+            Assert.That(_controller.GetFavoriteEventItems().Result, Is.EqualTo(eventTask.Result));
+        }
+        
+        [Test]
+        public void GetFavoriteEventItems_IfThereAreNoFavorites_ReturnsEmptyList()
+        {
+            var eventList = new List<EventItem>();
+            var eventTask = Task.Run(() => eventList);
+
+            _mockRepository.GetFavorites().Returns(eventList);
+            Assert.That(_controller.GetFavoriteEventItems().Result, Is.EqualTo(eventTask.Result));
+        }
     }
 }
