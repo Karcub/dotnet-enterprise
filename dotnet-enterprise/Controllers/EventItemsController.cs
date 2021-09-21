@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
+using dotnet_enterprise.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using dotnet_enterprise.Models;
@@ -13,46 +11,39 @@ namespace dotnet_enterprise.Controllers
     [ApiController]
     public class EventItemsController : ControllerBase
     {
-        private readonly EventContext _context;
+        private readonly IEventItemRepository _repository;
 
-        public EventItemsController(EventContext context)
+        public EventItemsController(IEventItemRepository repository)
         {
-            _context = context;
+            _repository = repository;
         }
 
         // GET: api/EventItems
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<EventItem>>> GetEventItems()
+        public Task<IEnumerable<EventItem>> GetEventItems()
         {
-            return await _context.EventItems.ToListAsync();
+            return _repository.GetAllEventItems();
         }
 
         // GET: api/EventItems/favorites
         [HttpGet("favorites")]
-        public async Task<ActionResult<IEnumerable<EventItem>>> GetFavoriteEventItems()
+        public Task<IEnumerable<EventItem>> GetFavoriteEventItems()
         {
-            return await _context.EventItems
-                .Where(eventItem => eventItem.IsFavorite)
-                .ToListAsync();
+            return _repository.GetFavorites();
         }
         
         // GET: api/EventItems/category/THEATER
         [HttpGet("filter/{filterType}/{keyword}")]
-        public async Task<ActionResult<IEnumerable<EventItem>>> GetCategoryEventItems(string filterType, string keyword)
+        public Task<IEnumerable<EventItem>> GetCategoryEventItems(string filterType, string keyword)
         {
-            return await _context.EventItems
-                .Where(eventItem => filterType.Equals("category") ? 
-                    eventItem.Category == keyword : eventItem.City  == keyword)
-                .ToListAsync();
+            return _repository.GetCategoryEventItems(filterType, keyword);
         }
 
         //GET: api/EventItems/event/Semmi
         [HttpGet("event/{name}")]
-        public async Task<ActionResult<IEnumerable<EventItem>>> GetEventItemByName(string name)
+        public Task<IEnumerable<EventItem>> GetEventItemByName(string name)
         {
-            return await _context.EventItems
-                .Where(eventItem => eventItem.Name.ToLower().Contains(name.ToLower()))
-                .ToListAsync();
+            return _repository.GetEventItemByName(name);
         }
 
 
@@ -60,7 +51,7 @@ namespace dotnet_enterprise.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<EventItem>> GetEventItem(long id)
         {
-            var eventItem = await _context.EventItems.FindAsync(id);
+            var eventItem = await _repository.GetEventItem(id);
 
             if (eventItem == null)
             {
@@ -80,15 +71,13 @@ namespace dotnet_enterprise.Controllers
                 return BadRequest();
             }
 
-            _context.Entry(eventItem).State = EntityState.Modified;
-
             try
             {
-                await _context.SaveChangesAsync();
+                await _repository.Put(eventItem);
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!EventItemExists(id))
+                if (!_repository.EventItemExists(id))
                 {
                     return NotFound();
                 }
@@ -105,8 +94,7 @@ namespace dotnet_enterprise.Controllers
         [HttpPost]
         public async Task<ActionResult<EventItem>> PostEventItem(EventItem eventItem)
         {
-            _context.EventItems.Add(eventItem);
-            await _context.SaveChangesAsync();
+            await _repository.Post(eventItem);
 
             return CreatedAtAction(nameof(GetEventItem), new { id = eventItem.Id }, eventItem);
         }
@@ -115,21 +103,15 @@ namespace dotnet_enterprise.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteEventItem(long id)
         {
-            var eventItem = await _context.EventItems.FindAsync(id);
+            var eventItem = await _repository.GetEventItem(id);
             if (eventItem == null)
             {
                 return NotFound();
             }
 
-            _context.EventItems.Remove(eventItem);
-            await _context.SaveChangesAsync();
+            _repository.Delete(id);
 
             return NoContent();
-        }
-
-        private bool EventItemExists(long id)
-        {
-            return _context.EventItems.Any(e => e.Id == id);
         }
     }
 }
