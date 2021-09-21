@@ -1,7 +1,15 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using dotnet_enterprise.Controllers;
 using dotnet_enterprise.Interfaces;
+using dotnet_enterprise.Models;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.OpenApi.Any;
 using NUnit.Framework;
 using NSubstitute;
+using NUnit.Framework.Internal.Execution;
 
 namespace dotnet_enterprise_tests
 {
@@ -16,12 +24,17 @@ namespace dotnet_enterprise_tests
         {
             _mockRepository = Substitute.For<IEventItemRepository>();
             _controller = new EventItemsController(_mockRepository);
+           
         }
 
         [Test]
-        public void Test1()
+        public void GetEventItem_IfItemExist_ReturnItem()
         {
-            Assert.Pass();
+            var eventItem = new EventItem { Id = 1 };
+            var eventTask = Task.Run(() => eventItem);
+
+            _mockRepository.GetEventItem(1).Returns(eventTask);
+            Assert.That(_controller.GetEventItem(1).Result.Value, Is.EqualTo(eventItem));
         }
     }
 }
