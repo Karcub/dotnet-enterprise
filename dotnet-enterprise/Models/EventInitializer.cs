@@ -509,7 +509,7 @@ namespace dotnet_enterprise.Models
             };
             EventItem eventItem27 = new EventItem
             {
-                Id = 29,
+                Id = 27,
                 Name = "A nagy Gatsby",
                 Subtitle = "--",
                 IsFavorite = false,

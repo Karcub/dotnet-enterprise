@@ -36,5 +36,15 @@ namespace dotnet_enterprise_tests
             _mockRepository.GetEventItem(1).Returns(eventTask);
             Assert.That(_controller.GetEventItem(1).Result.Value, Is.EqualTo(eventItem));
         }
+        
+        [Test]
+        public void GetEventItem_IfItemDoesntExist_ReturnItem()
+        {
+            var eventItem = new EventItem { Id = 1 };
+            var eventTask = Task.Run(() => eventItem);
+
+            _mockRepository.GetEventItem(1).Returns(eventTask);
+            Assert.That(_controller.GetEventItem(1).Result.Value, Is.EqualTo(eventItem));
+        }
     }
 }
