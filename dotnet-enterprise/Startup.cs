@@ -6,6 +6,7 @@ using Microsoft.Extensions.Hosting;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using dotnet_enterprise.Models;
+using dotnet_enterprise.Interfaces;
 
 namespace dotnet_enterprise
 {
@@ -34,6 +35,7 @@ namespace dotnet_enterprise
             services.AddControllers();
             services.AddDbContext<EventContext>(opt =>
                                                opt.UseInMemoryDatabase("EventList"));
+            services.AddScoped<IEventItemRepository, InMemoryEventItemRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

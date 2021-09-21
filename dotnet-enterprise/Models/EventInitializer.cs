@@ -477,12 +477,103 @@ namespace dotnet_enterprise.Models
                 Date = new DateTime(2021, 9, 19, 13, 00,00),
                 Category = "FESTIVAL"
             };
+            EventItem eventItem25 = new EventItem
+            {
+                Id = 25,
+                Name = "Csirkefej",
+                Subtitle = "Spiró György",
+                IsFavorite = false,
+                Description = "",
+                City = "Budapest",
+                Location = "Gózon Gyula Kamaraszínház Alapítvány, 6szín Teátrum<br>1066 Budapest, Jókai utca 6.",
+                Image = "https://pb2.jegy.hu/imgs/system-4/program/000/106/563/spiro-gyorgy-csirkefej-original-153999.jpg",
+                EventUrl = "https://www.jegy.hu/program/spiro-gyorgy-csirkefej-106563?affiliate_code=cln5-20210920-spiro_gyorgy_csirkefej",
+                UserId = 1,
+                Date = new DateTime(2021, 9, 29, 13, 00, 00),
+                Category = "THEATER"
+            };
+            EventItem eventItem26 = new EventItem
+            {
+                Id = 26,
+                Name = "Salome",
+                Subtitle = "Zenedráma egy felvonásban",
+                IsFavorite = false,
+                Description = "",
+                City = "Budapest",
+                Location = "Erkel Színház / Erkel Theatre, Erkel Színház <br>1087 Budapest, II. János Pál pápa tér 30.",
+                Image = "https://pb2.jegy.hu/imgs/system-4/program/000/103/340/salome-original-160788.jpg",
+                EventUrl = "https://www.jegy.hu/program/salome-103340",
+                UserId = 1,
+                Date = new DateTime(2021, 9, 22, 19, 00, 00),
+                Category = "OPERA"
+            };
+            EventItem eventItem27 = new EventItem
+            {
+                Id = 29,
+                Name = "A nagy Gatsby",
+                Subtitle = "--",
+                IsFavorite = false,
+                Description = "",
+                City = "Budapest",
+                Location = "Vígszínház <br>1137 Budapest, Szent István krt. 14.",
+                Image = "https://pb2.jegy.hu/imgs/system-4/program/000/103/655/a-nagy-gatsby-474-279-138627.jpg",
+                EventUrl = "https://www.jegy.hu/program/a-nagy-gatsby-103655",
+                UserId = 1,
+                Date = new DateTime(2021, 9, 29, 13, 00, 00),
+                Category = "OPERA"
+            };
+            EventItem eventItem28 = new EventItem
+            {
+                Id = 28,
+                Name = "Kabaré",
+                Subtitle = "MASTEROFF-EBB-KANDER",
+                IsFavorite = false,
+                Description = "<p>MASTEROFF-EBB-KANDER: KABARÉ<br>musical 2 részben<br>Dalszöveg: Blum Tamás és Vörös Róbert<br>Vígszínházi változat (2021): Vörös Róbert, Béres Attila<br><br>Berlin. Az 1930-as évek elején. Igazi világváros, ahol minden megtörténhet és meg is történik. Hontalan kalandorok, a vágy, a remény és a szabadság megszállottjai adnak itt egymásnak találkozót. A város sötét szívében egy ócska lokál falatnyi színpadán estéről estére föllép a sikerre mohón áhítozó, extravagáns énekesnő, Sally Bowles, aki Amerikából vetődött ide. A véletlen sodorja őt össze az Angliából érkező fiatal, ambiciózus írójelölttel, Cliff Bradshawval, és egymásba szeretnek. A szerelem rátalál a panziótulajdonosnő Schneider kisasszonyra, és örökké hű lovagjára, Schultz úrra, a zöldség-kiskereskedőre is. Az élet még csodálatos, még béke van...<br><br>A legendás musical és a belőle készült világhírű film Liza Minnellivel a főszerepben sokunknak nagy élménye. A cím hallatán azonnal dúdoljuk a népszerű dalokat, az Ananászt, a Money-Money-t, a Mein Herrt és a Kabarét.<br><br>Szereposztás:<br>KONFERANSZIÉ, a Kék Angyal mulató művésze.............................. SERESS ZOLTÁN<br>SALLY BOWLES, a Kék Angyal első számú vendégénekesnője....... SZILÁGYI CSENGE / DOBÓ ENIKŐ<br>FRAULEIN SCHNEIDER, panziótulajdonos....................................... IGÓ ÉVA<br>HERR SCHULTZ, zöldség-gyümölcs kereskedő................................ KERN ANDRÁS<br>CLIFFORD BRADSHAW, ír születésű amerikai író............................ BRASCH BENCE<br>ERNST LUDWIG, berlini őslakos....................................................... HORVÁTH SZABOLCS<br>FRAULEIN KOST, konzumnő............................................................. BACH KATA / RUDOLF SZONJA<br>BOBBY, a mulató pincére................................................................... CSAPÓ ATTILA<br>MADAME MIRELLE, regényírónő...................................................... GILICZE MÁRTA<br>HELGA, táncoslány, friss tehetség a Kék Angyalban......................... RUDOLF SZONJA / RIMÁR IZABELLA<br>AZ UFA FILMVÁLLALAT PRODUCERE............................................ DENGYEL IVÁN<br>FIATAL POLITIKUS............................................................................ KOVÁCS OLIVÉR / SZABÓ SZÁSA<br>KISFIÚ................................................................................................ CHATER ÁRON / ORBÁN HUNOR / <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ORBÁN TAMÁS / RÁTKAY ÁBEL<br><br>Berlini lakosok, a bár vendégei: Forgács Róbert, Rátonyi Gábor, Rizek Lajos, Szelényi Katalin, Viszt Attila, Wiesmeyer Erik<br><br>Valamint: Adamovich Ferenc, Bálint Barna, Bársony Szandra, Biczó Anna, Birta Márton, Drahota Albert, <br>Eöry Mónika, Fehér Laura, Hajdu Ádám, Harangozó Boglárka, Harmat Noémi, Kelemen Krisztián, <br>Kiss Eszter, Koller Nikolett, Kolozsvári Ádám, Kondorosi Nikolett, Kuczora Ákos, Magyar Lili, <br>Misik Renáta, Nagy Lili Anna, Ónodi Tibor, Orosz Gergő, Perger Mátyás, Rimár Izabella, <br>Szabó András, Szabó Renáta, Szakács Richárd, Tóth Arnold, Tóth Brigitta, Viola Péter<br><br>Kórus: Czigány Judit, Gellért-Robinik Péter, Karányi Péter, Mráz Nikolett, Zajkás Boldizsár<br>Hegedű: Balázs Tamás, Kiss-Varga Roberta Izabella, Kiss Vilmos Tibor, Zsótér Zita<br>Cselló: Bali Gabriella, Betterman Rebeka, Hotzi Mátyás, Tiborcz Balázs László<br>Nagybőgő: Gyányi Tamás, Hosszú Kristóf<br>Fuvola: Gombár Anikó, Tóth Ágnes<br>Klarinét/szaxofon: Bartek Zsolt, Kéringer Dávid, Kurucz Levente, Sándor Norbert<br>Fagott: Bettermann Jákob, Losonci Luca, Simonics Viktória<br>Trombita: Kutyifa Gergő, Mihályfi Márk, Rónai Gábor<br>Harsona: Bodon Bence, Kolozsvári Erik<br>Gitár: Dörnyei Szabolcs, Kovács Tamás<br>Zongora/harmonika: Szép András<br>Ütő: Hlaszny Ádám, Standovár Mátyás, Tuboly Roland<br><br>Koncertmester: KISS-VARGA ROBERTA IZABELLA / KISS VILMOS TIBOR<br>Korrepetítor: TOMPA ÁBEL <br>Hangszerelés: MESTER DÁVID, TOMPA ÁBEL<br>Súgó: GÁL TÜNDE <br>Ügyelő: WIESMEYER ERIK, RÖTHLER BALÁZS<br>A rendező munkatársa: PATKÓS GERGŐ <br>Koreográfus-asszisztens: KISS ESZTER<br>Díszlet: CZIEGLER BALÁZS <br>Jelmez: TIHANYI ILDI<br>Koreográfus: BARTA DÓRA <br>Világítás: CSONTOS BALÁZS<br><br>Dramaturg: VÖRÖS RÓBERT<br>Zenei vezető, karmester: MESTER DÁVID<br>Rendező: BÉRES ATTILA<br><br>Olvasópróba: 2021. február 8. 11.00<br>Házifőpróba: 2021. május 31., június 1. 19.00<br>Vígszínházi bemutató: 2021. október 9. 19.00</p>",
+                City = "Budapest",
+                Location = "Vígszínház<br>1137 Budapest, Szent István krt. 14.",
+                Image = "https://pb2.jegy.hu/imgs/system-4/program/000/121/948/kabare-original-168873.jpgv",
+                EventUrl = "https://www.jegy.hu/program/kabare-121948?affiliate_code=cln7-20210913-kabare",
+                UserId = 1,
+                Date = new DateTime(2021, 10, 9, 13, 00, 00),
+                Category = "OPERA"
+            };
+            EventItem eventItem29 = new EventItem
+            {
+                Id = 29,
+                Name = "István, a király",
+                Subtitle = "egy családi viszály története",
+                IsFavorite = false,
+                Description = "<p>Az István, a király egy családi viszály története: Géza fejedelem halála után fia örökölné a hatalmat, de a hagyományokra hivatkozva nagybátyja, Koppány is tömegeket gyűjt maga köré. István külföldi támogatással megszilárdíthatja a pozícióját, de a véres összecsapás elkerülhetetlen. <br><br>Szörényi Levente és Bródy János legendás művén generációk nőttek fel, slágereit minden nemzedék kívülről ismeri. Székely Kriszta rendezése új értelmezését keresi a klasszikus történetnek, az előadás ezúttal a történelmi háttér helyett a mindenkori emberi tényezőkre helyezi a hangsúlyt, olyan alapvető kérdéseket feszegetve, mint hogy milyen eszközöket lehet bevetni a győzelem érdekében, milyen elveket áldozunk fel politikai célokért, vagy hogy a hatalom mindenekelőtt áll-e. <br><br>A szerzők jogait a Zikkurat Színpadi Ügynökség és a Melody Kft. képviseli és biztosítja.</p>",
+                City = "Budapest",
+                Location = "Budapesti Operettszínház, Nagyszínpad <br>1065 Budapest, Nagymező 17",
+                Image = "https://pb2.jegy.hu/imgs/system-4/program/000/092/203/istvan-a-kiraly-original-130304.jpg",
+                EventUrl = "https://www.jegy.hu/program/istvan-a-kiraly-92203",
+                UserId = 1,
+                Date = new DateTime(2021, 10, 7, 19, 00, 00),
+                Category = "MUSICAL"
+            };
+            EventItem eventItem30 = new EventItem
+            {
+                Id = 30,
+                Name = "Boribon és Annipanni",
+                Subtitle = "Ajánlott életkor: 3+",
+                IsFavorite = false,
+                Description = "<p>Marék Veronika hősei a gyermekkorom legkorábbi irodalmi élményei voltak, és a saját gyermekeimnek is tovább adtam ezt az örökséget. <em>Boribon és Annipanni</em> kapcsolata számomra érdekes keveredése egy barátságnak és az anya-gyermek viszonynak. Mindkét esetben a feltétel nélküli szeretet az, ami összeköt két embert. A célom az volt, hogy a gyerekeknek és szüleiknek át tudjam adni az előadáson keresztül azt az érzést, amikor átölel valamelyik gyermekem. A <em>Boribon és Annipanni</em> előadása nem más, mint egy szeretetteljes, nagy ölelés. Mindezt hétköznapi kalandok során élhetik át a nézők, melyek legnagyobb varázsa, hogy minden mai és egykori gyerek számára ismerősek. Mert mindenki vágyott már piros kisautóra, barátkozott össze kóbor cicával, vagy épített házat az asztal alatt. Mindenki volt már beteg, fújt a kádban buborékot, és kért anyától még egy esti mesét. És mindenkinek van legjobb barátja, mint Annipanninak Boribon, és Boribonnak Annipanni.</p>",
+                City = "Budapest Bábszínház, Nagyszínpad <br>1062 Budapest, Andrássy út 69.",
+                Location = "Budapest",
+                Image = "https://pb2.jegy.hu/imgs/system-4/program/000/042/854/boribon-es-annipanni-original-43315.jpg",
+                EventUrl = "https://www.jegy.hu/program/boribon-es-annipanni-42854",
+                UserId = 1,
+                Date = new DateTime(2021, 10, 29, 10, 30, 00),
+                Category = "PUPPET-THEATER"
+            };
             
             EventItems = new[]
             {
                 eventItem4, eventItem2, eventItem22, eventItem, eventItem18, eventItem6, eventItem7, eventItem8,
                 eventItem16, eventItem10, eventItem11, eventItem12, eventItem13, eventItem14, eventItem15,
-                eventItem9, eventItem17, eventItem5, eventItem19, eventItem20, eventItem21, eventItem3, eventItem23
+                eventItem9, eventItem17, eventItem5, eventItem19, eventItem20, eventItem21, eventItem3, eventItem23, 
+                eventItem25, eventItem26, eventItem27, eventItem28, eventItem29, eventItem30
             };
         }
     }
