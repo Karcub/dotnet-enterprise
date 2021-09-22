@@ -505,7 +505,7 @@ namespace dotnet_enterprise.Models
                 EventUrl = "https://www.jegy.hu/program/salome-103340",
                 UserId = 1,
                 Date = new DateTime(2021, 9, 22, 19, 00, 00),
-                Category = "OPERA"
+                Category = "THEATER"
             };
             EventItem eventItem27 = new EventItem
             {
@@ -520,7 +520,7 @@ namespace dotnet_enterprise.Models
                 EventUrl = "https://www.jegy.hu/program/a-nagy-gatsby-103655",
                 UserId = 1,
                 Date = new DateTime(2021, 9, 29, 13, 00, 00),
-                Category = "OPERA"
+                Category = "THEATER"
             };
             EventItem eventItem28 = new EventItem
             {
@@ -535,7 +535,7 @@ namespace dotnet_enterprise.Models
                 EventUrl = "https://www.jegy.hu/program/kabare-121948?affiliate_code=cln7-20210913-kabare",
                 UserId = 1,
                 Date = new DateTime(2021, 10, 9, 13, 00, 00),
-                Category = "OPERA"
+                Category = "THEATER"
             };
             EventItem eventItem29 = new EventItem
             {
@@ -550,7 +550,7 @@ namespace dotnet_enterprise.Models
                 EventUrl = "https://www.jegy.hu/program/istvan-a-kiraly-92203",
                 UserId = 1,
                 Date = new DateTime(2021, 10, 7, 19, 00, 00),
-                Category = "MUSICAL"
+                Category = "THEATER"
             };
             EventItem eventItem30 = new EventItem
             {
@@ -565,7 +565,7 @@ namespace dotnet_enterprise.Models
                 EventUrl = "https://www.jegy.hu/program/boribon-es-annipanni-42854",
                 UserId = 1,
                 Date = new DateTime(2021, 10, 29, 10, 30, 00),
-                Category = "PUPPET-THEATER"
+                Category = "THEATER"
             };
             
             EventItems = new[]
