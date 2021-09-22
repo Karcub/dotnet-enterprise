@@ -10,5 +10,10 @@ namespace dotnet_enterprise.Models
         }
 
         public DbSet<EventItem> EventItems { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<EventItem>().HasData(new EventInitializer().EventItems);
+        }
     }
 }
