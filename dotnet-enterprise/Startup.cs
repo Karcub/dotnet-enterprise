@@ -33,17 +33,21 @@ namespace dotnet_enterprise
             });
 
             services.AddControllers();
-            services.AddDbContext<EventContext>(opt =>
-                                               opt.UseInMemoryDatabase("EventList"));
-            services.AddScoped<IEventItemRepository, InMemoryEventItemRepository>();
+            //services.AddDbContext<EventContext>(opt =>
+            //                                   opt.UseInMemoryDatabase("EventList"));
+            //services.AddScoped<IEventItemRepository, InMemoryEventItemRepository>();
+
+            services.AddDbContextPool<EventContext>(
+                       options => options.UseSqlServer(Configuration.GetConnectionString("EventItemDBConnection")));
+            services.AddTransient<IEventItemRepository, InMemoryEventItemRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            var scope = app.ApplicationServices.CreateScope();
-            var context = scope.ServiceProvider.GetRequiredService<EventContext>();
-            AddStartupData(context);
+            //var scope = app.ApplicationServices.CreateScope();
+            //var context = scope.ServiceProvider.GetRequiredService<EventContext>();
+            //AddStartupData(context);
 
             if (env.IsDevelopment())
             {
