@@ -6,14 +6,14 @@ using dotnet_enterprise.Interfaces;
 
 namespace dotnet_enterprise.Models
 {
-    public class InMemoryEventItemRepository : IEventItemRepository
+    public class EventItemRepository : IEventItemRepository
     {
         private readonly EventContext _context;
-        public InMemoryEventItemRepository(EventContext context)
+        public EventItemRepository(EventContext context)
         {
             _context = context;
         }
-        public async void Delete(long id)
+        public async Task<EventItem> Delete(long id)
         {
             var eventItem = await _context.EventItems.FindAsync(id);
             if (eventItem != null)
@@ -21,6 +21,7 @@ namespace dotnet_enterprise.Models
                 _context.EventItems.Remove(eventItem);
                 await _context.SaveChangesAsync();
             }
+            return eventItem;
         }
 
         public bool EventItemExists(long id)

@@ -109,7 +109,7 @@ namespace dotnet_enterprise.Controllers
                 return NotFound();
             }
 
-            _repository.Delete(id);
+            await _repository.Delete(id);
 
             return NoContent();
         }
