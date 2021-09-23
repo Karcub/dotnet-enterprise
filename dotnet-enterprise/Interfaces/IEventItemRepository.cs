@@ -6,14 +6,14 @@ namespace dotnet_enterprise.Interfaces
 {
     public interface IEventItemRepository
     {
-        Task<IEnumerable<EventItem>> GetAllEventItems();
-        Task<IEnumerable<EventItem>> GetFavorites();
-        Task<IEnumerable<EventItem>> GetCategoryEventItems(string filterType, string keyword);
-        Task<IEnumerable<EventItem>> GetEventItemByName(string name);
-        Task<EventItem> GetEventItem(long id);
-        Task<EventItem> Put(EventItem eventItem);
-        Task<EventItem> Post(EventItem eventItem);
-        Task<EventItem> Delete(long id);
+        Task<IEnumerable<EventItem>> GetAllEventItemsAsync();
+        Task<IEnumerable<EventItem>> GetFavoritesAsync();
+        Task<IEnumerable<EventItem>> GetCategoryEventItemsAsync(string filterType, string keyword);
+        Task<IEnumerable<EventItem>> GetEventItemByNameAsync(string name);
+        Task<EventItem> GetEventItemAsync(long id);
+        Task<EventItem> PutAsync(EventItem eventItem);
+        Task<EventItem> PostAsync(EventItem eventItem);
+        Task<EventItem> DeleteAsync(long id);
         bool EventItemExists(long id);
     }
 }

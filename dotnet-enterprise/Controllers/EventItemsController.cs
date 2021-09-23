@@ -22,28 +22,28 @@ namespace dotnet_enterprise.Controllers
         [HttpGet]
         public Task<IEnumerable<EventItem>> GetEventItems()
         {
-            return _repository.GetAllEventItems();
+            return _repository.GetAllEventItemsAsync();
         }
 
         // GET: api/EventItems/favorites
         [HttpGet("favorites")]
         public Task<IEnumerable<EventItem>> GetFavoriteEventItems()
         {
-            return _repository.GetFavorites();
+            return _repository.GetFavoritesAsync();
         }
         
         // GET: api/EventItems/category/THEATER
         [HttpGet("filter/{filterType}/{keyword}")]
         public Task<IEnumerable<EventItem>> GetCategoryEventItems(string filterType, string keyword)
         {
-            return _repository.GetCategoryEventItems(filterType, keyword);
+            return _repository.GetCategoryEventItemsAsync(filterType, keyword);
         }
 
         //GET: api/EventItems/event/Semmi
         [HttpGet("event/{name}")]
         public Task<IEnumerable<EventItem>> GetEventItemByName(string name)
         {
-            return _repository.GetEventItemByName(name);
+            return _repository.GetEventItemByNameAsync(name);
         }
 
 
@@ -51,7 +51,7 @@ namespace dotnet_enterprise.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<EventItem>> GetEventItem(long id)
         {
-            var eventItem = await _repository.GetEventItem(id);
+            var eventItem = await _repository.GetEventItemAsync(id);
 
             if (eventItem == null)
             {
@@ -73,7 +73,7 @@ namespace dotnet_enterprise.Controllers
 
             try
             {
-                await _repository.Put(eventItem);
+                await _repository.PutAsync(eventItem);
             }
             catch (DbUpdateConcurrencyException)
             {
@@ -94,7 +94,7 @@ namespace dotnet_enterprise.Controllers
         [HttpPost]
         public async Task<ActionResult<EventItem>> PostEventItem(EventItem eventItem)
         {
-            await _repository.Post(eventItem);
+            await _repository.PostAsync(eventItem);
 
             return CreatedAtAction(nameof(GetEventItem), new { id = eventItem.Id }, eventItem);
         }
@@ -103,13 +103,13 @@ namespace dotnet_enterprise.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteEventItem(long id)
         {
-            var eventItem = await _repository.GetEventItem(id);
+            var eventItem = await _repository.GetEventItemAsync(id);
             if (eventItem == null)
             {
                 return NotFound();
             }
 
-            await _repository.Delete(id);
+            await _repository.DeleteAsync(id);
 
             return NoContent();
         }
