@@ -8,7 +8,7 @@ namespace dotnet_enterprise.Models
 {
     public class DatabaseEventItemRepository : IEventItemRepository
     {
-        public void Delete(long id)
+        public Task<EventItem> Delete(long id)
         {
             throw new NotImplementedException();
         }

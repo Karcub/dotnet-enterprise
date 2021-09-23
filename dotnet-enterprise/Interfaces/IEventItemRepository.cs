@@ -13,7 +13,7 @@ namespace dotnet_enterprise.Interfaces
         Task<EventItem> GetEventItem(long id);
         Task<EventItem> Put(EventItem eventItem);
         Task<EventItem> Post(EventItem eventItem);
-        void Delete(long id);
+        Task<EventItem> Delete(long id);
         bool EventItemExists(long id);
     }
 }

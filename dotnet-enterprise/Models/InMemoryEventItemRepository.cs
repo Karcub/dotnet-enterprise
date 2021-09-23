@@ -13,7 +13,7 @@ namespace dotnet_enterprise.Models
         {
             _context = context;
         }
-        public async void Delete(long id)
+        public async Task<EventItem> Delete(long id)
         {
             var eventItem = await _context.EventItems.FindAsync(id);
             if (eventItem != null)
@@ -21,6 +21,7 @@ namespace dotnet_enterprise.Models
                 _context.EventItems.Remove(eventItem);
                 await _context.SaveChangesAsync();
             }
+            return eventItem;
         }
 
         public bool EventItemExists(long id)
