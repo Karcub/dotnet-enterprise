@@ -13,7 +13,7 @@ namespace dotnet_enterprise.Models
         {
             _context = context;
         }
-        public async Task<EventItem> Delete(long id)
+        public async Task<EventItem> DeleteAsync(long id)
         {
             var eventItem = await _context.EventItems.FindAsync(id);
             _context.EventItems.Remove(eventItem);
@@ -26,42 +26,42 @@ namespace dotnet_enterprise.Models
             return _context.EventItems.Any(e => e.Id == id);
         }
 
-        public async Task<IEnumerable<EventItem>> GetAllEventItems()
+        public async Task<IEnumerable<EventItem>> GetAllEventItemsAsync()
         {
             return await _context.EventItems.ToListAsync();
         }
 
-        public async Task<IEnumerable<EventItem>> GetCategoryEventItems(string filterType, string keyword)
+        public async Task<IEnumerable<EventItem>> GetCategoryEventItemsAsync(string filterType, string keyword)
         {
             return await _context.EventItems
                 .Where(item => filterType.Equals("category") ? item.Category == keyword : item.City == keyword)
                 .ToListAsync();
         }
 
-        public async Task<EventItem> GetEventItem(long id)
+        public async Task<EventItem> GetEventItemAsync(long id)
         {
             
             return await _context.EventItems.FindAsync(id);
         }
 
-        public async Task<IEnumerable<EventItem>> GetEventItemByName(string name)
+        public async Task<IEnumerable<EventItem>> GetEventItemByNameAsync(string name)
         {
             return await _context.EventItems.Where(item => item.Name.ToLower().Contains(name.ToLower())).ToListAsync();
         }
 
-        public async Task<IEnumerable<EventItem>> GetFavorites()
+        public async Task<IEnumerable<EventItem>> GetFavoritesAsync()
         {
             return await _context.EventItems.Where(item => item.IsFavorite).ToListAsync();
         }
 
-        public async Task<EventItem> Post(EventItem item)
+        public async Task<EventItem> PostAsync(EventItem item)
         {
             _context.EventItems.Add(item);
             await _context.SaveChangesAsync();
             return item;
         }
 
-        public async Task<EventItem> Put(EventItem item)
+        public async Task<EventItem> PutAsync(EventItem item)
         {
             _context.Entry(item).State = EntityState.Modified;
             await _context.SaveChangesAsync();

@@ -36,7 +36,7 @@ namespace dotnet_enterprise_tests
             var eventItem = new EventItem { Id = 1 };
             var eventTask = Task.Run(() => eventItem);
 
-            _mockRepository.GetEventItem(1).Returns(eventTask);
+            _mockRepository.GetEventItemAsync(1).Returns(eventTask);
             Assert.That(_controller.GetEventItem(1).Result.Value, Is.EqualTo(eventItem));
         }
         
@@ -58,7 +58,7 @@ namespace dotnet_enterprise_tests
             var eventList = new List<EventItem>() {eventItem2, eventItem3};
             var eventTask = Task.Run(() => eventList);
 
-            _mockRepository.GetFavorites().Returns(eventList);
+            _mockRepository.GetFavoritesAsync().Returns(eventList);
             Assert.That(_controller.GetFavoriteEventItems().Result, Is.EqualTo(eventTask.Result));
         }
         
@@ -68,7 +68,7 @@ namespace dotnet_enterprise_tests
             var eventList = new List<EventItem>();
             var eventTask = Task.Run(() => eventList);
 
-            _mockRepository.GetFavorites().Returns(eventList);
+            _mockRepository.GetFavoritesAsync().Returns(eventList);
             Assert.That(_controller.GetFavoriteEventItems().Result, Is.EqualTo(eventTask.Result));
         }
     }
