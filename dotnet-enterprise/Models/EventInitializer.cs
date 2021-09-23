@@ -31,7 +31,7 @@ namespace dotnet_enterprise.Models
                 EventUrl = "https://www.jegy.hu/program/semmi-40179",
                 UserId = 1,
                 Date = new DateTime(2021, 9, 29, 13, 00,00),
-                Category = "PUPPET-THEATER"
+                Category = "THEATER"
             };
             EventItem eventItem2 = new EventItem
             {
@@ -54,7 +54,7 @@ namespace dotnet_enterprise.Models
                 EventUrl = "https://www.jegy.hu/program/giselle-90843",
                 UserId = 1,
                 Date = new DateTime(2021, 09, 24, 19, 00, 00),
-                Category = "BALLET"
+                Category = "THEATER"
             };
             EventItem eventItem3 = new EventItem
             {
@@ -74,7 +74,7 @@ namespace dotnet_enterprise.Models
                 EventUrl = "https://www.jegy.hu/program/oz-a-csodak-csodaja-musical-ket-reszben-121891",
                 UserId = 1,
                 Date = new DateTime(2021, 08, 27, 19, 30, 00),
-                Category = "MUSICAL"
+                Category = "THEATER"
             };
             EventItem eventItem4 = new EventItem
             {
@@ -166,7 +166,7 @@ namespace dotnet_enterprise.Models
                 EventUrl = "https://www.jegy.hu/program/the-black-paintingsblue-szegedi-kortars-balett-hun-123757",
                 UserId = 1,
                 Date = new DateTime(2021, 8, 29, 19, 00,00),
-                Category = "BALLET"
+                Category = "THEATER"
             };
             EventItem eventItem7 = new EventItem
             {
@@ -415,7 +415,7 @@ namespace dotnet_enterprise.Models
                 EventUrl = "https://www.jegy.hu/program/jezus-krisztus-szupersztar-124729?affiliate_code=cln5-20210823-jezus_krisztus_szuperszt",
                 UserId = 1,
                 Date = new DateTime(2021, 10, 16, 15, 00,00),
-                Category = "MUSICAL"
+                Category = "THEATER"
             };
             EventItem eventItem20 = new EventItem
             {
