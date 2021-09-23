@@ -40,6 +40,7 @@ namespace dotnet_enterprise.Models
 
         public async Task<EventItem> GetEventItem(long id)
         {
+            
             return await _context.EventItems.FindAsync(id);
         }
 
