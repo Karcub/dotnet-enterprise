@@ -16,11 +16,8 @@ namespace dotnet_enterprise.Models
         public async Task<EventItem> Delete(long id)
         {
             var eventItem = await _context.EventItems.FindAsync(id);
-            if (eventItem != null)
-            {
-                _context.EventItems.Remove(eventItem);
-                await _context.SaveChangesAsync();
-            }
+            _context.EventItems.Remove(eventItem);
+            await _context.SaveChangesAsync();
             return eventItem;
         }
 
