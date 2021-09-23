@@ -38,14 +38,14 @@ namespace dotnet_enterprise
             {
                 services.AddDbContextPool<EventContext>(
                            options => options.UseSqlServer(Configuration.GetConnectionString("EventItemDBConnection")));
-                services.AddTransient<IEventItemRepository, InMemoryEventItemRepository>();
+                services.AddTransient<IEventItemRepository, EventItemRepository>();
 
             }
             else
             {
                 services.AddDbContext<EventContext>(opt =>
                                                    opt.UseInMemoryDatabase("EventList"));
-                services.AddScoped<IEventItemRepository, InMemoryEventItemRepository>();
+                services.AddScoped<IEventItemRepository, EventItemRepository>();
             }
 
         }

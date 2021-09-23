@@ -6,10 +6,10 @@ using dotnet_enterprise.Interfaces;
 
 namespace dotnet_enterprise.Models
 {
-    public class InMemoryEventItemRepository : IEventItemRepository
+    public class EventItemRepository : IEventItemRepository
     {
         private readonly EventContext _context;
-        public InMemoryEventItemRepository(EventContext context)
+        public EventItemRepository(EventContext context)
         {
             _context = context;
         }
